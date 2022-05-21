@@ -68,7 +68,6 @@ namespace Mango.Services.ProductAPI.Controllers
         }
 
         [HttpPut]
-        [Route("{id}")]
         public async Task<object> Put([FromBody] ProductDto productDto)
         {
             try
