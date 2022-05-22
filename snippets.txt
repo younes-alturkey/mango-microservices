@@ -1,3 +1,13 @@
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=DAWAKWkadmawlkd16516" -p 1433:1433 -d mcr.microsoft.com/mssql/server
 docker pull mcr.microsoft.com/mssql/server
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'Pass123!'
+
+--Delete FROM MangoIdentityServer.dbo.AspNetRoleClaims;
+--Delete FROM MangoIdentityServer.dbo.AspNetRoles;
+--Delete FROM MangoIdentityServer.dbo.AspNetUserClaims;
+--Delete FROM MangoIdentityServer.dbo.AspNetUserLogins;
+--Delete FROM MangoIdentityServer.dbo.AspNetUserRoles;
+--Delete FROM MangoIdentityServer.dbo.AspNetUserTokens;
+--Delete FROM MangoIdentityServer.dbo.AspNetUsers;
+
+SELECT * FROM MangoIdentityServer.dbo.AspNetUsers;
