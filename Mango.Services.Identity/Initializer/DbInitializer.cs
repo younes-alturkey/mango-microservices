@@ -46,8 +46,6 @@ namespace Mango.Services.Identity.Initializer
             var temp1 = _userManager.AddClaimsAsync(adminUser, new Claim[]
             {
                 new Claim(JwtClaimTypes.Name, adminUser.FirstName+" "+adminUser.LastName),
-                new Claim(JwtClaimTypes.Name, adminUser.FirstName),
-                new Claim(JwtClaimTypes.Name, adminUser.LastName),
                 new Claim(JwtClaimTypes.Role, SD.Admin)
             }).Result;
 
@@ -67,8 +65,6 @@ namespace Mango.Services.Identity.Initializer
             var temp2 = _userManager.AddClaimsAsync(customerUser, new Claim[]
             {
                 new Claim(JwtClaimTypes.Name, customerUser.FirstName+" "+customerUser.LastName),
-                new Claim(JwtClaimTypes.Name, customerUser.FirstName),
-                new Claim(JwtClaimTypes.Name, customerUser.LastName),
                 new Claim(JwtClaimTypes.Role, SD.Customer)
             }).Result;
         }
