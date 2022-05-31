@@ -1,5 +1,9 @@
 ﻿using Mango.Services.CouponAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Mango.Services.CouponAPI.DbContexts
 {
@@ -9,12 +13,12 @@ namespace Mango.Services.CouponAPI.DbContexts
         {
 
         }
-
-        public DbSet<Coupon> Coupons { get; set; }  
+        public DbSet<Coupon> Coupons { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
 
             modelBuilder.Entity<Coupon>().HasData(new Coupon
             {
@@ -22,13 +26,13 @@ namespace Mango.Services.CouponAPI.DbContexts
                 CouponCode = "10OFF",
                 DiscountAmount = 10
             });
-
             modelBuilder.Entity<Coupon>().HasData(new Coupon
             {
                 CouponId = 2,
                 CouponCode = "20OFF",
                 DiscountAmount = 20
             });
+
         }
     }
 }

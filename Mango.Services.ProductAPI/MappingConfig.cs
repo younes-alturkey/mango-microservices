@@ -1,6 +1,10 @@
 ﻿using AutoMapper;
 using Mango.Services.ProductAPI.Models;
-using Mango.Services.ProductAPI.Models.Dto;
+using Mango.Services.ProductAPI.Models.Dtos;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Mango.Services.ProductAPI
 {

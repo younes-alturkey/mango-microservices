@@ -1,4 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Mango.Services.ShoppingCartAPI.Models.Dto
 {
@@ -10,6 +14,5 @@ namespace Mango.Services.ShoppingCartAPI.Models.Dto
         public int ProductId { get; set; }
         public virtual ProductDto Product { get; set; }
         public int Count { get; set; }
-
     }
 }

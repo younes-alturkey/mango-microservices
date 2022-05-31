@@ -1,5 +1,10 @@
 ﻿using Mango.Web.Models;
 using Mango.Web.Services.IServices;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Mango.Web.Services
 {
@@ -16,7 +21,7 @@ namespace Mango.Web.Services
         {
             return await this.SendAsync<T>(new ApiRequest()
             {
-                ApiType = SD.APIType.POST,
+                ApiType = SD.ApiType.POST,
                 Data = productDto,
                 Url = SD.ProductAPIBase + "/api/products",
                 AccessToken = token
@@ -27,8 +32,8 @@ namespace Mango.Web.Services
         {
             return await this.SendAsync<T>(new ApiRequest()
             {
-                ApiType = SD.APIType.DELETE,
-                Url = SD.ProductAPIBase + "/api/products/" + id,
+                ApiType = SD.ApiType.DELETE,
+                Url = SD.ProductAPIBase + "/api/products/"+id,
                 AccessToken = token
             });
         }
@@ -37,7 +42,7 @@ namespace Mango.Web.Services
         {
             return await this.SendAsync<T>(new ApiRequest()
             {
-                ApiType = SD.APIType.GET,
+                ApiType = SD.ApiType.GET,
                 Url = SD.ProductAPIBase + "/api/products",
                 AccessToken = token
             });
@@ -47,8 +52,8 @@ namespace Mango.Web.Services
         {
             return await this.SendAsync<T>(new ApiRequest()
             {
-                ApiType = SD.APIType.GET,
-                Url = SD.ProductAPIBase + "/api/products/" + id,
+                ApiType = SD.ApiType.GET,
+                Url = SD.ProductAPIBase + "/api/products/"+id,
                 AccessToken = token
             });
         }
@@ -57,7 +62,7 @@ namespace Mango.Web.Services
         {
             return await this.SendAsync<T>(new ApiRequest()
             {
-                ApiType = SD.APIType.PUT,
+                ApiType = SD.ApiType.PUT,
                 Data = productDto,
                 Url = SD.ProductAPIBase + "/api/products",
                 AccessToken = token

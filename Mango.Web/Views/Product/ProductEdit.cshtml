@@ -1,15 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Edit Product";
-}
-
-@model Mango.Web.Models.ProductDto
+﻿@model Mango.Web.Models.ProductDto
 
 
 <form asp-action="ProductEdit">
-    <input asp-for="ProductId" hidden/>
+    <input asp-for="ProductId" hidden />
     <br />
     <div class="container border p-3">
-        <h1 class="text-info">Edit Product</h1>
+        <h1 class="text-primary">Edit Product</h1>
 
         <hr />
         <div class="row">
@@ -54,7 +50,7 @@
                 <a asp-action="ProductIndex" class="btn-primary btn form-control ">Back to List</a>
             </div>
             <div class="col-5">
-                <input type="submit" value="Update" class="btn btn-info form-control" />
+                <input type="submit" value="Update" class="btn btn-success form-control" />
 
             </div>
 
